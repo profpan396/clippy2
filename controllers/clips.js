@@ -1,19 +1,42 @@
 const Clip = require('../models/clip');
 
 module.exports = {
-    index,
-    new: newClip,
-
+  index,
+  show,
+  new: newClip,
+  create
 };
 
 function index(req, res) {
-  Clip.find({}, function(err, clips){
-    res.render('clips/index', {title: 'clips', clips})
-  }) 
-
-};
-
-function newClip(req, res) {
-    res.render('clips/new', {title: 'Add Clips' });
+  Clip.find({}, (err, clips) => {
+    clips.reverse();
+    res.render('clips/index', {clips});
+  });
 }
 
+function show(req, res) {
+  Clip.findOne({ _id: req.params.id },(err, clip) => {
+    res.render('clips/show', {clip});
+  });
+}
+
+function newClip(req, res) {
+  res.render('clips/new');
+}
+
+function create(req, res) {
+  var clipUrl = req.body.clipUrl;
+  var match = clipUrl.match(/https:\/\/clips\.twitch\.tv\/(?<uid>[A-z0-9\-]+)/m);
+  if (match.groups) {
+    var embeddedUrl = `https://clips.twitch.tv/embed?clip=${match.groups.uid}&parent=${req.hostname}`;
+    req.body.user = req.user._id;
+    req.body.Url = embeddedUrl;
+    var newClip = new Clip(req.body);
+    console.log(newClip);
+    newClip.save(() => {
+      res.redirect('/clips');
+    });    
+  } else {
+    res.redirect('/clips');
+  }
+}

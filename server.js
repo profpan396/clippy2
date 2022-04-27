@@ -8,17 +8,14 @@ var passport = require('passport');
 var methodOverride = require('method-override');
 
 
-//Database Connections
+// connect to the database with Mongoose
 require('dotenv').config();
-require('./config/database')
+require('./config/database');
 require('./config/passport');
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-// var homeRouter = require('./routes/home');
 var clipsRouter = require('./routes/clips');
-var libraryRouter = require('./routes/library');
-// var submitsRouter = require('./routes/submits');
+var reviewsRouter = require('./routes/reviews');
 
 
 var app = express();
@@ -30,39 +27,29 @@ app.set('view engine', 'ejs');
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(cookieParser());
 app.use(methodOverride('_method'));
 
-//session middleware 
 app.use(session({
   secret: process.env.SECRET,
   resave: false,
   saveUninitialized: true
 }));
 
-
-// Passport middleware
 app.use(passport.initialize());
 app.use(passport.session());
 
-
-// Make user available within every EJS template
-app.use(function(req, res, next) {
+// Add this middleware BELOW passport middleware
+app.use(function (req, res, next) {
   res.locals.user = req.user;
   next();
 });
 
-const isLoggedIn = require('./config/auth');
-
-
-
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
-// app.use('/home', homeRouter);
 app.use('/clips', clipsRouter);
-app.use('/library', libraryRouter);
-// app.use('/submits', submitsRouter);
+app.use('/', reviewsRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
