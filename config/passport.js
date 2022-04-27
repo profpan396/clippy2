@@ -4,7 +4,7 @@ const User = require('../models/user');
 
 passport.use(
   new GoogleStrategy(
-    // Configuation object
+    // Configuration object
     {
       clientID: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_SECRET,

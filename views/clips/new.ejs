@@ -1,0 +1,15 @@
+<%- include('../partials/header') %>
+
+<form class="add-clip-form" action="/clips" method="POST">
+    <label>URL</label>
+  <input type="text" name="contentUrl">
+  <label>esrbRating</label>
+  <select name="esrbRating">
+      <option value="E">E</option>
+      <option value="T">T</option>
+      <option value="M">M</option>
+      <option value="NR">NR</option>
+  <input type="submit" value="Add Clip">
+</form>
+
+<%- include('../partials/footer') %>

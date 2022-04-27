@@ -1,5 +1,10 @@
 <%- include('../partials/header') %>
-<h1>test</h1>
 
+
+<% clips.forEach(function(m) { %>
+    <tr>
+      <td><a href="/clips/<%= m._id %>"></a></td>
+    </tr>
+    <% }); %>
 
 <%- include('../partials/footer') %>
