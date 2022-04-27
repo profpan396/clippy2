@@ -10,13 +10,13 @@ module.exports = {
 function index(req, res) {
   Clip.find({}, (err, clips) => {
     clips.reverse();
-    res.render('clips/index', {clips});
+    res.render('clips/index', {clips, hostname: req.hostname});
   });
 }
 
 function show(req, res) {
   Clip.findOne({ _id: req.params.id },(err, clip) => {
-    res.render('clips/show', {clip});
+    res.render('clips/show', {clip, hostname: req.hostname});
   });
 }
 
