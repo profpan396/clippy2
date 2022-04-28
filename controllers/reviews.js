@@ -4,7 +4,6 @@ module.exports = {
   create,
   delete: deleteReview
 };
-
 function deleteReview(req, res, next) {
   Clip.findOne({'reviews._id': req.params.id}).then(function(clip) {
     const review = clip.reviews.id(req.params.id);
@@ -17,7 +16,6 @@ function deleteReview(req, res, next) {
     });
   });
 }
-
 function create(req, res) {
   Clip.findById(req.params.id, function(err, clip) {
     req.body.user = req.user._id;

@@ -36,3 +36,8 @@ a {
   width: 420px;
   height: 310px;
 }
+.allClipsContainer{
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+
+}

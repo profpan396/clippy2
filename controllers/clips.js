@@ -6,24 +6,20 @@ module.exports = {
   new: newClip,
   create
 };
-
 function index(req, res) {
   Clip.find({}, (err, clips) => {
     clips.reverse();
     res.render('clips/index', {clips, hostname: req.hostname});
   });
 }
-
 function show(req, res) {
   Clip.findOne({ _id: req.params.id },(err, clip) => {
     res.render('clips/show', {clip, hostname: req.hostname});
   });
 }
-
 function newClip(req, res) {
   res.render('clips/new');
 }
-
 function create(req, res) {
   var clipUrl = req.body.clipUrl;
   var match = clipUrl.match(/https:\/\/clips\.twitch\.tv\/(?<uid>[A-z0-9\-]+)/m);
