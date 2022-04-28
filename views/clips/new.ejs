@@ -3,9 +3,8 @@
 <div class="submitContainer">
   <h1 class="textSubmit">Submit Twitch Clip</h1>
   <form id="new-form" action="/clips" method="POST">
-    <label>Inset Clip URL Bellow</label>
     <br>
-    <input type="text" name="clipUrl" class="url-input" pattern="https:\/\/clips\.twitch\.tv\/([A-z0-9\-]+)" placeholder="Clip URL..." />
+    <input type="text" name="clipUrl" class="url" pattern="https:\/\/clips\.twitch\.tv\/([A-z0-9\-]+)" placeholder="Clip URL..." />
     <button id="submitBtn" type="submit">Submit</button>    
   </form>
 </div>
