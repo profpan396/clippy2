@@ -2,7 +2,6 @@
   box-sizing: border-box;
   font-family: Helvetica;
 }
-
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -11,7 +10,6 @@ body {
   background-size: cover;
   margin: 0;
 }
-
 .navBar {
   display: flex;
   background-color: black;
@@ -19,15 +17,23 @@ body {
   align-items: center;
   padding: 0 20px 0 30px
 }
-
 nav > a {
   padding: 5px;
 }
-
 a {
   color: #FFF;
 }
-
 .login img {
   height: 30px;
 }
+.viewComments {
+  justify-content: center;
+}
+.submitContainer {
+  display: flex;
+  justify-content: column;
+  align-items: center;
+  width: 420px;
+  height: 310px;
+}
+
