@@ -4,17 +4,24 @@
 </div>
 
 <div align="center">
-
-  <h3>Hitesh Deo AKA Tesh</h3>`                             
+  <h3>Hitesh Deo AKA Tesh!</h3>`                             
   <a href="https://github.com/tesh510"_target="_blank">
+    <img src="https://img.shields.io/badge/-Portfolio:_github.com/tesh510.io-darkgreen?style=flat&logo=medium"/>
   </a>
   <a href="https://www.linkedin.com/in/tesh-deo94/" target="_blank">
+    <img src="https://img.shields.io/badge/-linkedin.com/in/tesh-deo94-blue?style=flat&``logo=Linkedin&logoColor=white">
   </a> 
+  <a href="hiteshdeo@yahoo.com" target="_blank">
+    <img src="https://img.shields.io/badge/-hiteshdeo@yahoo.com-c14438?style=flat&logo=Gmail&``logoColor=white">
+  </a>
 </div>
-<h1>:pencil: Description</h1>
+
+<h1>:Pencil: Description</h1>
 <p align="center" >Clippy Vid App</p>
+
 <details>
 <summary> :gear: Functionality</summary>
+
   | Description | Screenshot |
   |------------ | ------------|
   | <h3 align="center">Landing Page</h3> | <img src="https://i.imgur.com/boJ7O1q.png"/>
@@ -38,9 +45,19 @@
 ![Git](https://img.shields.io/badge/-Git-333?style=flat&logo=git)
 ![Github](https://img.shields.io/badge/-GitHub-333?style=flat&logo=github)
 ![VSCode](https://img.shields.io/badge/-VS_Code-333?style=flat&logo=visualstudio) 
+
+
 <h2> :atom_symbol: Getting Started </h2>
 <a href="https://trello.com/b/OlIsti1V/clippy">Trello</a>
 <a href="https://clippy22.herokuapp.com/">Deployed Heroku App</a>
+
+<h3> :calling: Instructions </h3>
+<details open>
+  <summary>Community Guidelines</summary>
+  <ol>
+  <li>ADD MORE CLIPS!</li>
+  </ol>
+</details>
 
 ## :fast_forward: Next Steps   
 ### Upcoming Features
