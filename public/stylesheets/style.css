@@ -11,6 +11,12 @@ body {
   background-position: center;
   background-attachment: fixed;
 }
+.logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
 nav {
   display: inline-block;
   top: 0;
@@ -85,11 +91,14 @@ label {
 h2 {
 
 }
-.rate {
 
-}
+/* Will Focus on this when i have more understanding */
+/* .rate {
+
+} */
+
 .comRev {
-
+  
 }
 input {
   display: block;
