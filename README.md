@@ -6,7 +6,7 @@
 <div align="center">
   <h3>Hitesh Deo AKA Tesh!</h3>`                             
   <a href="https://github.com/tesh510"_target="_blank">
-    <img src="https://img.shields.io/badge/-Portfolio:_github.com/tesh510.io-darkgreen?style=flat&logo=medium"/>
+    <img src="https://img.shields.io/badge/-Portfolio:_tesh510.github.io-darkgreen?style=flat&logo=medium"/>
   </a>
   <a href="https://www.linkedin.com/in/tesh-deo94/" target="_blank">
     <img src="https://img.shields.io/badge/-linkedin.com/in/tesh-deo94-blue?style=flat&``logo=Linkedin&logoColor=white">
