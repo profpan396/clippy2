@@ -8,15 +8,16 @@
   <Title>clippy2</Title>
 </head>
 <body>
-  <nav>
-    <% if (user) { %>
-      <a href="/">HOME</a>
-      <a href="/clips">LIBRARY</a>
-      <a href="/clips/new">ADD CLIPS</a>
-      <a href="/logout">LOG OUT</a>
-      <% } else { %>
-        <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
-        <% } %>
-    </nav>
-      
+  <header>
+    <nav>
+      <% if (user) { %>
+        <a href="/">HOME</a>
+        <a href="/clips">LIBRARY</a>
+        <a href="/clips/new">ADD CLIPS</a>
+        <a href="/logout">LOG OUT</a>
+        <% } else { %>
+          <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
+          <% } %>
+      </nav>  
+  </header>
       <h1 class ="clippy">#cLIPPY</h1>

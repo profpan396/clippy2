@@ -1,5 +1,4 @@
 * {
-  box-sizing: border-box;
   font-family: Helvetica;
 }
 body {
@@ -9,13 +8,19 @@ body {
   height: 100vh;
   background-size: cover;
   margin: 0;
+  background-position: center;
+  background-attachment: fixed;
 }
+
 nav {
-  display: flex;
+  display: inline-block;
+  top: 0;
+  width: 85%;
   background-color: black;
-  justify-content: flex-end;
   align-items: center;
-  padding: 0 20px 0 30px
+  position: fixed;
+  box-shadow: 0 2px 2px grey;
+  z-index: 9999;
 }
 .clippy {
   color: #fff;
@@ -30,14 +35,17 @@ nav > a {
 }
 a {
   color: #FFF;
+  display: block;
+  float: right;
+  position: relative;
 }
 .login img {
   height: 30px;
 }
 .viewComments {
-  display: flex;
+  display: block;
   align-items: center;
-  margin-left: 100px;
+  margin-left: 35%;
   justify-content: center;
   
 }
@@ -65,13 +73,18 @@ a {
   gap: 5px;
 }
 .allClipsContainer{
-  display: flex;
+  display: inline-block;
+  width: 100%;
   margin: auto;
-  align-items: center;
-  justify-content: center;
-  grid-template-columns: 100px 100px 100px;
 }
 .url {
   font-weight: 800;
   font-size: 23px;
+}
+.videoContainer{
+  display: block;
+  float: left;
+  justify-content: center;
+  width: auto;
+  margin: 25px;
 }
