@@ -17,7 +17,7 @@
 </div>
 
 <h1>:Pencil: Description</h1>
-<p align="center"img src="https://i.imgur.com/hLCfOqI.png"</p>
+<img align="center"img src="https://i.imgur.com/hLCfOqI.png"</p>
 
 <details>
 <summary> :gear: Functionality</summary>
